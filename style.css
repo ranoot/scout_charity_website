@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  margin: 0px;
+  overflow-x: Hidden;
+}
+
+/*header and texts*/
+
+.container h1 {
+  font-family: 'Muli', sans-serif;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+.information .details {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.additional-info {
+  font-family: "Raleway", sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/*Background Image*/
+
+.bg-image {
+  background-image: url("sreeramar.jpg");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  filter: blur(3px);
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  max-width: 47rem;
+  margin: auto;
+  opacity: 0.80;
+  z-index: 1;
+}
+
+.information {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.toggler {
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  opacity: 0;
+}
+
+/*styling hamburger menu icon*/
+
+.hamburger {
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 0;
+  transition-duration: 300ms;
+  border-radius: 0.3rem;
+  opacity: 0.80;
+}
+
+.lines > div {
+  height: 0.2rem;
+  width: 2.3rem;
+  background-color: black;
+  margin: 0.6rem 0.3rem;
+  
+}
+
+.toggler:hover + .hamburger{
+  opacity: 0.65;
+  padding-right: 30rem;
+  transition-delay: 300ms;
+}
+
+.toggler:checked + .hamburger{
+  background-color: white;
+  padding-right: 30rem;
+}
+
+/*style options*/
+
+.options ul {
+  position: absolute;
+  top: 11px;
+  left: 55px;
+  
+}
+
+.options ul li {
+  float: left;
+  margin: 10px 30px;
+  list-style: none;
+  position: relative;
+  z-index: 1;
+}
+
+.options ul li a {
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+  color: black;
+}
+
+.options ul li a:hover {
+  color: grey;
+}
+
+.options {
+  visibility: collapse;
+  transition-duration: 150ms;
+  transition-delay: 0ms;
+}
+
+.toggler:checked ~ .options {
+  visibility: visible;
+}
+
+.toggler:hover ~ .options {
+  visibility: visible;
+  opacity: 0.65;
+  transition-duration: 150ms;
+  transition-delay: 300ms;
+}
+
+/*Cards*/
+
+.cards {
+  background-color: white;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card h1 {
+  font-family: 'Muli', sans-serif;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.card p {
+  font-family: "Raleway", sans-serif;
+}
+
+.card {
+  border: 0.5px solid black;
+  width: 33%;
+  height: 90%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+/*footer*/
+
+footer {
+  background-image: linear-gradient(white,grey);
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  font-family: 'Muli', sans-serif;
+  text-decoration: none;
+  font-size: 25px;
+  background-color: rgb(207, 207, 207);
+  color: black;
+  border-radius: 1rem;
+  margin: 2.5rem;
+  padding: 1.8rem
+}
+
+footer a:hover {
+  opacity: 70%;
+}
